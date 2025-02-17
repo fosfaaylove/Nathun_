@@ -128,4 +128,4 @@ async def on_member_remove(member):
 server_on()
 
 # รันบอท
-bot.run(os.getenv('TOKEN'))
+bot.run(os.getenv('.env'))
