@@ -129,4 +129,4 @@ async def on_member_remove(member):
 server_on()
 
 # รันบอท
-bot.run(TOKEN)
+bot.run(os.getenv('TOKEN'))
