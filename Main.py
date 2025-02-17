@@ -2,19 +2,13 @@ import discord
 from discord.ext import commands
 import sqlite3
 import os
-from dotenv import load_dotenv
 from myserver import server_on
 
-load_dotenv()
-
-# กำหนดค่าตัวแปรจาก .env
-my_value = os.getenv('MY_ENV_VARIABLE')
-print(my_value)
-DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
-GUILD_ID = int(os.getenv("GUILD_ID", 0))
-ROLE_ID = int(os.getenv("ROLE_ID", 0))
-CHANNEL_ID = int(os.getenv("CHANNEL_ID", 0))
-WELCOME_CHANNEL_ID = int(os.getenv("WELCOME_CHANNEL_ID", 0))
+GUILD_ID = 1339460291745812622  # แทนค่าด้วย ID จริง
+ROLE_ID = 1160150386619977738  # แทนค่าด้วย ID จริง
+CHANNEL_ID = 1339519103240634368  # แทนค่าด้วย ID จริง
+WELCOME_CHANNEL_ID = 1160171207375716392  # แทนค่าด้วย ID จริง
+STEAM_API_KEY = 17659D1B70B6884FB220D41A215EB073
 
 # ตรวจสอบค่าที่จำเป็น
 if not DISCORD_BOT_TOKEN:
@@ -135,4 +129,4 @@ async def on_member_remove(member):
 server_on()
 
 # รันบอท
-bot.run(DISCORD_BOT_TOKEN)
+bot.run(TOKEN)
